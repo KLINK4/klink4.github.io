@@ -1,26 +1,16 @@
 # KLINK4 — Landing Page
 
-Site vitrine statique de **KLINK4**, DevSecOps Factory spécialisée en identité numérique, Wallet, BLE, RFID et cryptographie.
+Site vitrine statique de **KLINK4**
 
 ## Stack
 
 - HTML5
 - CSS3 (custom properties, flexbox, grid, animations)
 - Vanilla JS (scroll effect de la navbar uniquement)
-- Police [Syne](https://fonts.google.com/specimen/Syne) + [Inter](https://fonts.google.com/specimen/Inter) via Google Fonts
+
+Les polices: [Syne](https://fonts.google.com/specimen/Syne) + [Inter](https://fonts.google.com/specimen/Inter) via Google Fonts
 
 Aucune dépendance, aucun build nécessaire.
-
-## Structure
-
-```
-klink4-landing-html/
-├── index.html      # Page principale
-├── style.css       # Feuille de styles
-└── public/
-    ├── favicon.svg
-    └── icons.svg
-```
 
 ## Lancer en local
 
