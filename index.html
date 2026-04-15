@@ -66,13 +66,13 @@
     <!-- ── ABOUT ── -->
     <section id="about" class="section section--alt">
       <div class="section-inner">
-        <span class="section-tag">01 — À propos</span>
+        <span class="section-tag reveal">01 — À propos</span>
         <div class="about-grid">
-          <h2 class="section-title">
+          <h2 class="section-title reveal reveal--d1">
             Leader en<br />
             sécurité<span class="c-yellow"> logicielle</span>
           </h2>
-          <div class="about-body">
+          <div class="about-body reveal reveal--d2">
             <p>
               Klink4 est leader dans la conception de solutions logicielles
               sécurisées qui protègent les actifs stratégiques des Organisations
@@ -102,13 +102,13 @@
     <!-- ── EXPERTISE ── -->
     <section id="expertise" class="section">
       <div class="section-inner">
-        <span class="section-tag">02 — Expertise</span>
-        <h2 class="section-title">
+        <span class="section-tag reveal">02 — Expertise</span>
+        <h2 class="section-title reveal reveal--d1">
           Nos domaines<br />
           d'<span class="c-blue">excellence</span>
         </h2>
         <div class="expertise-grid">
-          <article class="expertise-card">
+          <article class="expertise-card reveal reveal--d1">
             <span class="card-num">01</span>
             <h3 class="card-title">Identité numérique</h3>
             <p class="card-desc">
@@ -122,7 +122,7 @@
               <span class="tag">Contrôle d'accès</span>
             </div>
           </article>
-          <article class="expertise-card">
+          <article class="expertise-card reveal reveal--d2">
             <span class="card-num">02</span>
             <h3 class="card-title">Communication sans fil</h3>
             <p class="card-desc">
@@ -138,7 +138,7 @@
               <span class="tag">UHF</span>
             </div>
           </article>
-          <article class="expertise-card">
+          <article class="expertise-card reveal reveal--d3">
             <span class="card-num">03</span>
             <h3 class="card-title">Systèmes sécurisés</h3>
             <p class="card-desc">
@@ -152,7 +152,7 @@
               <span class="tag">Interopérabilité</span>
             </div>
           </article>
-          <article class="expertise-card">
+          <article class="expertise-card reveal reveal--d4">
             <span class="card-num">04</span>
             <h3 class="card-title">DevSecOps Factory</h3>
             <p class="card-desc">
@@ -172,13 +172,13 @@
     <!-- ── SPECIALIZATIONS ── -->
     <section class="section section--alt">
       <div class="section-inner">
-        <span class="section-tag">03 — Spécialisations</span>
-        <h2 class="section-title">
+        <span class="section-tag reveal">03 — Spécialisations</span>
+        <h2 class="section-title reveal reveal--d1">
           Nos domaines<br />
           de <span class="c-yellow">maîtrise</span>
         </h2>
         <div class="spec-pillars">
-          <div class="spec-pillar">
+          <div class="spec-pillar reveal reveal--d1">
             <div class="spec-pillar__accent"></div>
             <h3 class="spec-pillar__title">Sécurité &amp; Identité</h3>
             <p class="spec-pillar__desc">
@@ -193,7 +193,7 @@
               <li>Sécurité by design</li>
             </ul>
           </div>
-          <div class="spec-pillar">
+          <div class="spec-pillar reveal reveal--d2">
             <div class="spec-pillar__accent"></div>
             <h3 class="spec-pillar__title">Communication sans fil</h3>
             <p class="spec-pillar__desc">
@@ -207,7 +207,7 @@
               <li>Interopérabilité</li>
             </ul>
           </div>
-          <div class="spec-pillar">
+          <div class="spec-pillar reveal reveal--d3">
             <div class="spec-pillar__accent"></div>
             <h3 class="spec-pillar__title">Systèmes &amp; IoT</h3>
             <p class="spec-pillar__desc">
@@ -221,7 +221,7 @@
               <li>Intégration système</li>
             </ul>
           </div>
-          <div class="spec-pillar">
+          <div class="spec-pillar reveal reveal--d4">
             <div class="spec-pillar__accent"></div>
             <h3 class="spec-pillar__title">Développement logiciel</h3>
             <p class="spec-pillar__desc">
@@ -242,8 +242,8 @@
     <!-- ── VISION ── -->
     <section id="vision" class="section">
       <div class="section-inner">
-        <span class="section-tag">04 — Vision</span>
-        <blockquote class="vision-quote">
+        <span class="section-tag reveal">04 — Vision</span>
+        <blockquote class="vision-quote reveal reveal--d1">
           "Pour bâtir ensemble un avenir de
           <span class="c-yellow">confiance</span>, Klink4 met l'innovation au
           cœur de sa stratégie et assure le développement de solutions ouvertes
@@ -295,6 +295,22 @@
           navbar.classList.remove("navbar--scrolled");
         }
       });
+
+      // Scroll reveal with IntersectionObserver
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => revealObserver.observe(el));
     </script>
   </body>
 </html>
