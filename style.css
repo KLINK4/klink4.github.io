@@ -73,7 +73,7 @@ body {
 }
 
 .nav-inner {
-  max-width: 1360px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -180,7 +180,7 @@ nav a:hover {
 
 .hero-content {
   position: relative;
-  max-width: 1360px;
+  max-width: 1400px;
   margin: 0 auto;
   width: 100%;
   padding-top: 7rem;
@@ -197,7 +197,7 @@ nav a:hover {
 
 .hero-title {
   font-family: "Syne", sans-serif;
-  font-size: clamp(3.2rem, 7.5vw, 7rem);
+  font-size: clamp(3.2rem, 5.5vw, 7rem);
   font-weight: 800;
   line-height: 1;
   letter-spacing: -0.03em;
@@ -321,7 +321,7 @@ nav a:hover {
 }
 
 .section-inner {
-  max-width: 1360px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -574,7 +574,7 @@ nav a:hover {
 }
 
 .footer-inner {
-  max-width: 1360px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
